@@ -26,7 +26,7 @@
       String sql1 = "SELECT SupplierID, Name FROM `supplier` where email = ? and password = ?";
       String[] result = dbConnect.isPwdValid(sql1, email, pwd);
       if (result[0].length() >= 6 && result[0].substring(0, 6).equals("Error:")) {
-        session.setAttribute("logged", "index");
+        session.setAttribute("logged", "supplierPortalLogin");
         response.sendRedirect("supplierRegister.jsp?error='" + result[0] + "'");
         out.print("Invalid login credentials!");
       } else {

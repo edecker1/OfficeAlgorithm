@@ -14,9 +14,9 @@
   <body>
     <%@include file="header.jsp" %>
     <% // session control
-      if (logged == null || logged.equals("index")) {
+      if (logged == null || logged.equals("supplierPortalLogin")) {
         // If not logged in, send them to login screen
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("supplierPortalLogin.jsp");
       } 
     %>
     

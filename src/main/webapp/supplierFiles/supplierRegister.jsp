@@ -10,7 +10,7 @@
     </head>
     <body>
       <% // session control
-      if (logged == null || logged.equals("index")) {
+      if (logged == null || logged.equals("supplierRegister.jsp")) {
         // If not logged in, pass because they are in the right place
       } else {
         response.sendRedirect("supplierPortalHome.jsp");
@@ -68,7 +68,7 @@
             
             <p>
               <label class='inputLabel'>Username:</label>
-              <input class='form-control' id='username' name='username' type="text" placeholder="Usernames should be at least 6 characters long and have a number."required>
+              <input class='form-control' id='username' name='username' type="text" placeholder="Usernames should be at least 6 characters long and have a number." required>
               <div id='invalidUsernameLength' class="text-danger" style='display: none'>
                 <b>Username needs to be 6 characters or more!</b>
               </div>
@@ -117,7 +117,7 @@
         </form>
         
         <br>
-        <a href="index.jsp">Already have an account? Click here to log in.</a>
+        <a href="supplierPortalLogin.jsp">Already have an account? Click here to log in.</a>
         <br><br>
         
       </div>

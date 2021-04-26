@@ -1,0 +1,361 @@
+/* 
+    Created on : May 3, 2021, 8:55:50 PM
+    Author     : karis
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    background: radial-gradient(#fff,#b1b1b1);
+    padding-bottom: 30px;
+}
+
+/*HEADER*/
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    background-color:#212329;
+    color: #fff;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 13px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px 8px;
+    background-color: inherit;
+}
+
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 13px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+a {
+    float: left;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    text-decoration: none;
+}
+
+.match{
+    float: left;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    transition: 0.3s ease-out;
+}
+p{
+    color: #555;
+    text-align: center;
+}
+.logo{
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+nav input[type=text] {
+    font-size: 13px;
+}
+
+.Searchbtn{
+    background-color: red;
+    color: #fff;
+    font-size: 10px;
+    border: none;
+    width:40px;
+    height:25px;
+
+}
+
+.Search{
+    padding-left: 0.5rem;
+    padding-right: 0;
+    width: 150px;
+    height:25px;
+}
+/*BODY INDEX PAGE*/
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 0;
+}
+
+.col-2 h2{
+    font-size: 25px;
+    line-height: 40px;
+    margin: 25px 0;
+    text-align: center
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 0;
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.featured{
+    margin: 30px 0;
+    padding: 0;
+}
+
+.col-3{
+    flex: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+}
+
+.col-3 img{
+    width: 80%;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    line-height: 50px;
+    color: #555;
+}
+
+
+.col-3:hover{
+    transform: translateY(-5px);
+}
+
+
+/* The dropdown container */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+
+/*FOOTER*/
+.footer-conatiner{
+    background-color: #212329;
+    padding: 2rem 2rem 4rem 6rem;
+}
+
+.footer{
+    width: 80%;
+    height: 30vh;
+    background-color: #212429;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+.footer-heading h3{
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.footer-heading a{
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.footer-heading a:hover{
+    color: red;
+    transition: 0.3s ease-out;
+}
+
+
+
+
+
+.container2{
+    max-width: 1300px;
+    width: 70%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 13px;
+    color: black;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #212329;
+}
+
+form .category{
+    display: flex;
+    width: 80%;
+    margin:  0 ;
+    justify-content: center;
+}
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .button{
+    height: 35px;
+    margin: 35px 0;
+    color: #fff;
+    background-color: red;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #212329;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: radial-gradient(#fff, graytext);
+}
+form .button input:hover{
+    background: radial-gradient(#fff, #b1b1b1);
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+    color: #212329;
+}
+form .category{
+    width: 100%;
+}
+
+
+
+

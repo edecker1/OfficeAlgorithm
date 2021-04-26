@@ -10,7 +10,7 @@
     </head>
     <body>
       <% // session control
-      if (logged == null || logged.equals("index")) {
+      if (logged == null || logged.equals("supplierPortalHome")) {
         // if not logged in pass, because you are in the right place
       } else {
         response.sendRedirect("supplierLogout.jsp");

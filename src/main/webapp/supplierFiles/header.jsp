@@ -40,9 +40,9 @@
       <ul class="navbar-nav">
           <%
             // Login Check
-            if (logged == null || logged.equals("index")){
+            if (logged == null || logged.equals("supplierPortalLogin")){
               out.print("<li class='nav-item'>"
-              + "<a class='nav-link' href='index.jsp'>Login</a>"
+              + "<a class='nav-link' href='supplierPortalLogin.jsp'>Login</a>"
               + "</li>");
             } else {
               // If logged in

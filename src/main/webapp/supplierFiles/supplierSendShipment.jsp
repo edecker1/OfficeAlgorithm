@@ -11,8 +11,8 @@
     </head>
     <body>
       <% // session control
-      if (logged == null || logged.equals("index")) {
-        response.sendRedirect("index.jsp");
+      if (logged == null || logged.equals("supplierPortalLogin")) {
+        response.sendRedirect("supplierPortalLogin.jsp");
       } else {
         // Check approval
         if (approval == null){

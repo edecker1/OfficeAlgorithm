@@ -13,9 +13,9 @@
     <title>Logging Out</title>
   </head>
   <%
-      session.setAttribute("logged", "index");
+      session.setAttribute("logged", "supplierPortalLogin");
       session.setAttribute("id", "null");
-      response.sendRedirect("index.jsp");
+      response.sendRedirect("supplierPortalLogin.jsp");
     %>
     
     <%@include file="footer.jsp" %>
