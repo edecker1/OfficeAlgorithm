@@ -25,7 +25,7 @@
                         <img src="images/blackStapler.jpg" />
                         <h4>Black Stapler</h4>
                         <p>$10.99</p>
-                        <form action="Order.jsp">
+                        <form action="custCart.jsp">
                             <button id="1" type="submit">Add to Cart</button>
                         </form>                    </div>
                     <div class="col-3">
