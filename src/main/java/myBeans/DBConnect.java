@@ -179,6 +179,12 @@ public class DBConnect {
             try {
                 rst = stm.executeQuery(sql);
                 rsmd = rst.getMetaData();
+                
+                if (!rst.isBeforeFirst()){
+                  // No data
+                  html = "<div class='container' style='text-align:center;'><p> You do not have any items in our system!</p><br>"
+                          + "<p>You can add item by selecting option from above!</p><BR></div>";
+                } else {
 
                 while (rst.next()) {
                     String name = rst.getString("Name");
@@ -198,6 +204,7 @@ public class DBConnect {
                     } else {
                         html += "<td class='text-success'>" + quant + "</td></tr>";
                     }
+                }
                 }
                 html += "</tbody></table></div>";
                 return html;
@@ -348,9 +355,10 @@ public class DBConnect {
                 } else {
                     int x = 1;
                     for (String i : pastOrders) {
-                        String sql1 = "SELECT shipmentDate, status "
+                        String sql1 = "SELECT shipmentDate, `status`"
                                 + "FROM `supplierorder`"
-                                + "WHERE sOrderID='" + i + "'";
+                                + "WHERE sOrderID='" + i + "'"
+                                + "ORDER BY shipmentDate";
                         String sql2 = "SELECT Name, supplierorderstock.quantity "
                                 + "FROM `supplierorderstock` "
                                 + "INNER JOIN stock "
@@ -362,7 +370,7 @@ public class DBConnect {
                             String date = rst.getString("shipmentDate");
                             String status = rst.getString("status");
                             if (status.equals("Processing")) {
-                                html += "<div class='order'><br><p>Order #" + x + ": " + date + " --> <span class='text-warning'>" + status + "</span> </p>";
+                                html += "<div class='order'><br><p>Order #" + x + ": " + date + " --> <span class='text-info'>" + status + "</span> </p>";
                             } else if (status.equals("Shipped")) {
                                 html += "<div class='order'><br><p>Order #" + x + ": " + date + " --> <span class='text-primary'>" + status + "</span> </p>";
                             } else if (status.equals("Cancelled")) {
@@ -393,7 +401,7 @@ public class DBConnect {
                         + "<h4 class='inputLabel'>Change Order Process:</h4>"
                         + "<form action='supplierProcessingAction.jsp'><br>"
                         + "<select class='custome-select' name='orderSelect' id='orderSelect'>";
-                String sql3 = "SELECT sOrderID, status FROM `supplierorder` WHERE supplierID='" + id + "'";
+                String sql3 = "SELECT shipmentDate, sOrderID, status FROM `supplierorder` WHERE supplierID='" + id + "' ORDER BY shipmentDate";
                 rst = stm.executeQuery(sql3);
                 rsmd = rst.getMetaData();
                 int x = 1;
@@ -450,12 +458,12 @@ public class DBConnect {
                         html += "</ul>";
                         html += "<form action='supplierFulfillAction.jsp'><br>"
                                 + "<input type='text' hidden name='id' id='id' value='" + j + "'>"
-                                + "<label class='inputLabel'>Action:   </label>"
+                                + "<label class='inputLabelSmall'>Action:   </label>"
                                 + "<select name='fulfill' id='fulfill'>"
                                 + "<option value='Processing'>Fulfill</option>"
                                 + "<option value='Rejected'>Reject</option>"
                                 + "</select><br>"
-                                + "<label class='inputLabel'>Estimated Shipping Date:   </label>"
+                                + "<label class='inputLabelSmall'>Estimated Shipping Date:   </label>"
                                 + "<input type='date' id='newDate' name='newDate' value='2021-04-25'><br>"
                                 + "<button class='button submitButton' type='submit'>Submit</button>"
                                 + "</form><br>"

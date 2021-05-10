@@ -16,6 +16,7 @@ colors: https://colorhunt.co/palette/258271
   text-align: center;
   background-color: #4a47a3;
   color: #a7c5eb;
+  box-shadow: 10px 0 5px -2px grey;
   
 }
 
@@ -26,12 +27,29 @@ colors: https://colorhunt.co/palette/258271
   text-align: center;
   background-color: #4a47a3;
   color: #a7c5eb;
+  box-shadow: 10px 0 5px -2px grey;
 }
 
 .boxedWhite {
   border: solid black;
   border-width: 1.5px;
   border-radius: 12px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.wrapper{
+  
+}
+
+.wrapper::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 10px 10px 5px grey;
+  z-index: -1;
 }
 
 .bg-darkest {
@@ -133,12 +151,29 @@ colors: https://colorhunt.co/palette/258271
   font-size: 22px;
 }
 
-.order {
-  border: 2px solid black;
-  border-radius: 6px;
-  background-color: #a7c5eb;
+.inputLabelSmall {
+  text-shadow: 2px 2px 5px #709fb0;
   font-weight: bold;
-  overflow: auto;
+  font-size: 17px;
+}
+
+.order {
+  border: 2px groove black;
+  border-radius: 10px;
+  background-color: #413c69;
+  background-image: linear-gradient(to bottom right, #413c69 , #709fb0 );
+  font-weight: bold;
+  margin: 3px;
+  color: #a7c5eb;
+  text-shadow: 1px 1px 5px #709fb0;
+}
+
+.order p{
+  margin: 2px;
+}
+
+.whiteShadow{
+  text-shadow: 1px 1px 5px white;
 }
 
 .orderSection {
@@ -146,6 +181,9 @@ colors: https://colorhunt.co/palette/258271
   border-radius: 4px;
   text-shadow: 2px 2px 5px #709fb0;
   font-weight: bold;
+  overflow: auto;
+  max-height: 750px;
+  box-shadow: 10px 10px 5px grey;
 }
 
 /* The container must be positioned relative: */

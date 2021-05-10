@@ -34,7 +34,7 @@
     <br>
     <div class='container boxedTitle lightToDarkBottom'>
       <br>
-      <h3>Viewing Supplier Items</h3>
+      <h3>Supplier Items</h3>
       <br>
     </div>
     <div class="container centered boxedWhite ">
@@ -45,6 +45,13 @@
       <br>
       
     </div>
+    <br><br>
+    <div class='container boxedTitle darkToLightBottom'>
+      <br>
+      <h3>Item Table</h3>
+      <br>
+    </div>
+      
     <div class='boxedWhite container'>
       <br>
       <br>

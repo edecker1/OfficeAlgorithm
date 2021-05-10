@@ -10,10 +10,10 @@
     </head>
     <body>
       <% // session control
-      if (logged == null || logged.equals("supplierPortalHome")) {
+      if (logged == null) {
         // if not logged in pass, because you are in the right place
       } else {
-        response.sendRedirect("supplierLogout.jsp");
+        response.sendRedirect("supplierPortalHome.jsp");
         // if already logged in, send to portal home
       }
     %>

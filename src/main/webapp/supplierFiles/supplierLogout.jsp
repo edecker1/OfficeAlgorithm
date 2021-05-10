@@ -13,6 +13,12 @@
     <title>Log Out</title>
   </head>
   <body>
+    <% // session control
+      if (logged == null ) {
+        // If not logged in, send them to login screen
+        response.sendRedirect("supplierPortalLogin.jsp");
+      } 
+    %>
     <br>
     <div class='container boxedTitle darkToLightBottom'>
       <h3>Are you sure you want to log out?</h3>

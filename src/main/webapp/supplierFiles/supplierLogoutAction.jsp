@@ -13,8 +13,9 @@
     <title>Logging Out</title>
   </head>
   <%
-      session.setAttribute("logged", "supplierPortalLogin");
+      session.setAttribute("logged", null);
       session.setAttribute("id", "null");
+      session.setAttribute("approval", "null");
       response.sendRedirect("supplierPortalLogin.jsp");
     %>
     

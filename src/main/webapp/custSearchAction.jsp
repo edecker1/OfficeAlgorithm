@@ -19,6 +19,7 @@
         <%
             String Name = request.getParameter("Name");
             String sql = "SELECT Name, Cost FROM `stock` WHERE Name = '" + Name + "' ";
+            out.print(sql);
             DBConnect dbConnect = new DBConnect();
             out.print(dbConnect.search(sql, Name));
         %>
